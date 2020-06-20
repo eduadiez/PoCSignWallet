@@ -103,14 +103,14 @@ class App extends Component {
       this.setState({
         signature: response.result,
         derived_pb: newAccount.address,
-        derived_sk: newAccount.address,
+        derived_sk: response.result.substring(0, 66),
         babyjub_x: pub.p[0].toString(16),
         babyjub_y: pub.p[1].toString(16),
         babyjub_compressed: pub.compress(),
         rows: [
           createData('Signature', response.result),
           createData('ETH1.x derived public key', newAccount.address),
-          createData('ETH1.x derived secret key', newAccount.address),
+          createData('ETH1.x derived secret key', response.result.substring(0, 66)),
           createData('Babyjub public x', pub.p[0].toString(16)),
           createData('Babyjub public y', pub.p[1].toString(16)),
           createData('Babyjub compressed', pub.compress()),
