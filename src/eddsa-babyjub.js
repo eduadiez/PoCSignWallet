@@ -7,7 +7,7 @@ const { leBuff2int } = require("ffjavascript").utils;
 /**
  * Class representing EdDSA Baby Jub signature
  */
-class Signature {
+export class Signature {
     /**
      * Create a Signature with the R8 point and S scalar
      * @param {Array[bigInt]} r8 - R8 point
@@ -54,7 +54,7 @@ class Signature {
 /**
  * Class representing a EdDSA baby jub public key
  */
-class PublicKey {
+export class PublicKey {
     /**
      * Create a PublicKey from a curve point p
      * @param {Array[bigInt]} p - curve point
@@ -121,7 +121,7 @@ class PublicKey {
 /**
  * Class representing EdDSA Baby Jub private key
  */
-class PrivateKey {
+export class PrivateKey {
     /**
      * Create a PirvateKey from a 32 byte Buffer
      * @param {Buffer} buf - private key

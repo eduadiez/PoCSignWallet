@@ -11,7 +11,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Web3 from 'web3'
 import './App.css'
-const eddsaBabyJub = require("./eddsa-babyjub");
+import { Signature, PublicKey, PrivateKey } from './eddsa-babyjub';
+
 
 function createData(name, value) {
   return { name, value };
@@ -94,7 +95,7 @@ class App extends Component {
       }
       var newAccount = web3.eth.accounts.privateKeyToAccount(response.result.substring(0, 66))
       console.log(response.result.substring(67, 131))
-      const priv = new eddsaBabyJub.PrivateKey(Buffer.from(response.result.substring(67, 99)));
+      const priv = new PrivateKey(Buffer.from(response.result.substring(67, 99)));
 
       const pub = priv.public();
       console.log(priv)
