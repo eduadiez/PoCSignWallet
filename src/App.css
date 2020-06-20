@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Header */
+  
+  .logo {
+    height: 34px;
+    position: relative;
+    top: 4px;
+    flex: 1;
   }
-  to {
-    transform: rotate(360deg);
+  .appbar {
+    position: relative;
   }
-}
+  .toolbar {
+    flex: 1;
+  }
+  
+  /* Main body */
+  
+  main {
+    margin: 20px;
+  }
+  .layout {
+    width: auto;
+    max-width: 800;
+    margin: auto;
+  }
+  /* Hero */
+  
+  .hero-content {
+    margin: 0 auto;
+    padding: 64px 0 48px;
+  }
+  .hero-text {
+    color: #0000008a;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+  }
+  .hero-title {
+    margin-bottom: 0.35em;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 3.75rem;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.00833em;
+  }
+  
+  /* Card */
+  
+  .card {
+    transition: background-color 0.5s ease;
+  }
+  .card-name {
+    font-size: 14px;
+  }
+  .card-block {
+    font-size: 0.875rem;
+    color: #858585;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .card-balance {
+    color: #000000de;
+    font-size: 1.5rem;
+    font-weight: 400;
+    min-height: 27.5px;
+    margin-bottom: 0;
+  }
