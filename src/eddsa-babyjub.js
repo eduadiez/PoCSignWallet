@@ -127,7 +127,6 @@ class PrivateKey {
      * @param {Buffer} buf - private key
      */
     constructor(buf) {
-        console.log(buf.length)
         if (buf.length !== 32) {
             throw new Error("buf must be 32 bytes");
         }
@@ -191,7 +190,7 @@ class PrivateKey {
     }
 }
 
-module.exports = {
+export default {
     Signature,
     PublicKey,
     PrivateKey,
