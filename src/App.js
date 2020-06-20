@@ -11,7 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Web3 from 'web3'
 import './App.css'
-import { Signature, PublicKey, PrivateKey } from './eddsa-babyjub';
+import { PrivateKey } from './eddsa-babyjub';
 
 
 function createData(name, value) {
